@@ -8,11 +8,11 @@ import{
 }from"./util.js"
 document.getElementById("3").addEventListener("keydown",(w)=>{
 	if(w.key==="Enter"){
-		document.getElementById("5").innerHTML=q(["\u2935",Hct.from(+document.getElementById("1").value,+document.getElementById("2").value,+document.getElementById("3").value)],hexFromArgb)
+		document.getElementById("5").innerHTML=q(Hct.from(+document.getElementById("1").value,+document.getElementById("2").value,+document.getElementById("3").value),hexFromArgb)
 	}
 })
 document.getElementById("4").addEventListener("keydown",(e)=>{
 	if(e.key==="Enter"){
-		document.getElementById("5").innerHTML=q(["\u2935",Hct.fromInt(argbFromHex(document.getElementById("4").value))],hexFromArgb)
+		document.getElementById("5").innerHTML=q(Hct.fromInt(argbFromHex(document.getElementById("4").value)),hexFromArgb)
 	}
 })

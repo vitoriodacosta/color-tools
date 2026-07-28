@@ -1,17 +1,7 @@
 export function q(w,e){
 	let r=``
-	for(let t in w){
-		if(typeof w[t]==="object"){
-			r+=`
-				<li>${t}</li>
-				<ol>
-			`
-			r+=q(w[t],e)
-			r+=`
-				</ol>
-			`
-		}
-		else if(typeof w[t]==="number"){
+	for(let t in Object.getOwnPropertyDescriptors(Object.getPrototypeOf(Object.getPrototypeOf(w)))){
+		if(typeof w[t]==="number"){
 			r+=`
 				<li>
 					<span style="color: ${e(w[t])}">\u2588</span>
@@ -21,7 +11,7 @@ export function q(w,e){
 				</li>
 			`
 		}
-		else {
+		else{
 			r+=`
 				<li>
 					<span style="opacity: 0.66">${t}</span>
